@@ -1,0 +1,669 @@
+# Starting simulation...
+# 
+# === RISC-V Processor Signals ===
+# Time=0 | PC=xxxxxxxx | Instr=xxxxxxxx | ReadData1=xxxxxxxx | ReadData2=xxxxxxxx | imm=xxxxxxxx | ALUres=xxxxxxxx | RegWrite=x
+# 
+# === AXI Slave Signals ===
+# Time=5 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=5 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=5 | write_enable=x | read_enable=0 | empty=1 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=5 | MemWrite=x | res=xxxxxxxx | newd=x
+# Time=5 | PC=00000000 | Instr=fffff037 | ReadData1=0000001f | ReadData2=0000001f | imm=ffffffff | ALUres=0000003e | RegWrite=0
+# 
+# === Address Decoder ===
+# Time=15 | MemWrite=0 | res=0000003e | newd=0
+# 
+# === FIFO Signals ===
+# Time=15 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=15 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=15 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# Time=15 | PC=00000004 | Instr=80008513 | ReadData1=00000001 | ReadData2=00000000 | imm=fffff800 | ALUres=fffff801 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=25 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=25 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=25 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=25 | MemWrite=0 | res=fffff801 | newd=0
+# Time=25 | PC=00000008 | Instr=00500113 | ReadData1=00000000 | ReadData2=00000005 | imm=00000005 | ALUres=00000005 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=35 | MemWrite=0 | res=00000005 | newd=0
+# 
+# === FIFO Signals ===
+# Time=35 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=35 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=35 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# Time=35 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=45 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=45 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=45 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=45 | MemWrite=0 | res=00000000 | newd=0
+# Time=45 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=55 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=55 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=55 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=55 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# Time=55 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=65 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=65 | state=0 | next_state=1 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=65 | write_enable=1 | read_enable=0 | empty=1 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=65 | MemWrite=1 | res=fffff801 | newd=1
+# Time=65 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=75 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=75 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=75 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=75 | state=00 | next_state=01 | tready=0 | s_dout=zz
+# Time=75 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=85 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=85 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === FIFO Signals ===
+# Time=85 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=85 | MemWrite=0 | res=00000000 | newd=0
+# Time=85 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=95 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=95 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=05
+# 
+# === AXI Master Signals ===
+# Time=95 | state=1 | next_state=1 | count=1 | tvalid=1 | tdata=05 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=95 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# Time=95 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=105 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=105 | state=1 | next_state=1 | count=2 | tvalid=1 | tdata=0a | tlast=0
+# 
+# === FIFO Signals ===
+# Time=105 | write_enable=1 | read_enable=0 | empty=1 | full=0 | dout=05
+# 
+# === Address Decoder ===
+# Time=105 | MemWrite=1 | res=fffff801 | newd=1
+# Time=105 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=115 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=115 | write_enable=0 | read_enable=1 | empty=0 | full=1 | dout=05
+# 
+# === AXI Master Signals ===
+# Time=115 | state=1 | next_state=0 | count=3 | tvalid=1 | tdata=0f | tlast=1
+# 
+# === AXI Slave Signals ===
+# Time=115 | state=01 | next_state=00 | tready=1 | s_dout=zz
+# Time=115 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=125 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=125 | state=0 | next_state=0 | count=3 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=125 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=125 | MemWrite=0 | res=00000000 | newd=0
+# Time=125 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=135 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=135 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=135 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=135 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# Time=135 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=145 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=145 | state=0 | next_state=1 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=145 | write_enable=1 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=145 | MemWrite=1 | res=fffff801 | newd=1
+# Time=145 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=155 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=155 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=155 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=155 | state=00 | next_state=01 | tready=0 | s_dout=zz
+# Time=155 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=165 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=165 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === FIFO Signals ===
+# Time=165 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=165 | MemWrite=0 | res=00000000 | newd=0
+# Time=165 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=175 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=175 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=175 | state=1 | next_state=1 | count=1 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=175 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# Time=175 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=185 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=185 | state=1 | next_state=1 | count=2 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === FIFO Signals ===
+# Time=185 | write_enable=1 | read_enable=1 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=185 | MemWrite=1 | res=fffff801 | newd=1
+# Time=185 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=195 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=195 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=00
+# 
+# === AXI Master Signals ===
+# Time=195 | state=1 | next_state=0 | count=3 | tvalid=1 | tdata=00 | tlast=1
+# 
+# === AXI Slave Signals ===
+# Time=195 | state=01 | next_state=00 | tready=1 | s_dout=zz
+# Time=195 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=205 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=205 | state=0 | next_state=0 | count=3 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=205 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=00
+# 
+# === Address Decoder ===
+# Time=205 | MemWrite=0 | res=00000000 | newd=0
+# Time=205 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=215 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=215 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=00
+# 
+# === AXI Master Signals ===
+# Time=215 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=215 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# Time=215 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=225 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=225 | state=0 | next_state=1 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=225 | write_enable=1 | read_enable=0 | empty=1 | full=0 | dout=00
+# 
+# === Address Decoder ===
+# Time=225 | MemWrite=1 | res=fffff801 | newd=1
+# Time=225 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=235 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=235 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=00
+# 
+# === AXI Master Signals ===
+# Time=235 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=235 | state=00 | next_state=01 | tready=0 | s_dout=zz
+# Time=235 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=245 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=245 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=245 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=00
+# 
+# === Address Decoder ===
+# Time=245 | MemWrite=0 | res=00000000 | newd=0
+# Time=245 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=255 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=255 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=05
+# 
+# === AXI Master Signals ===
+# Time=255 | state=1 | next_state=1 | count=1 | tvalid=1 | tdata=05 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=255 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# Time=255 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=265 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=265 | state=1 | next_state=1 | count=2 | tvalid=1 | tdata=0a | tlast=0
+# 
+# === FIFO Signals ===
+# Time=265 | write_enable=1 | read_enable=0 | empty=1 | full=0 | dout=05
+# 
+# === Address Decoder ===
+# Time=265 | MemWrite=1 | res=fffff801 | newd=1
+# Time=265 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=275 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=275 | write_enable=0 | read_enable=1 | empty=0 | full=1 | dout=05
+# 
+# === AXI Master Signals ===
+# Time=275 | state=1 | next_state=0 | count=3 | tvalid=1 | tdata=0f | tlast=1
+# 
+# === AXI Slave Signals ===
+# Time=275 | state=01 | next_state=00 | tready=1 | s_dout=zz
+# Time=275 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=285 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=285 | state=0 | next_state=0 | count=3 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=285 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=285 | MemWrite=0 | res=00000000 | newd=0
+# Time=285 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=295 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=295 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=295 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=295 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# Time=295 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=305 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=305 | state=0 | next_state=1 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=305 | write_enable=1 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=305 | MemWrite=1 | res=fffff801 | newd=1
+# Time=305 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=315 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=315 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=315 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=315 | state=00 | next_state=01 | tready=0 | s_dout=zz
+# Time=315 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=325 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=325 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === FIFO Signals ===
+# Time=325 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=325 | MemWrite=0 | res=00000000 | newd=0
+# Time=325 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=335 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=335 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=335 | state=1 | next_state=1 | count=1 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=335 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# Time=335 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=345 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=345 | state=1 | next_state=1 | count=2 | tvalid=1 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=345 | write_enable=1 | read_enable=1 | empty=0 | full=0 | dout=00
+# 
+# === Address Decoder ===
+# Time=345 | MemWrite=1 | res=fffff801 | newd=1
+# Time=345 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=355 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=355 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=00
+# 
+# === AXI Master Signals ===
+# Time=355 | state=1 | next_state=0 | count=3 | tvalid=1 | tdata=00 | tlast=1
+# 
+# === AXI Slave Signals ===
+# Time=355 | state=01 | next_state=00 | tready=1 | s_dout=zz
+# Time=355 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=365 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=365 | state=0 | next_state=0 | count=3 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=365 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=00
+# 
+# === Address Decoder ===
+# Time=365 | MemWrite=0 | res=00000000 | newd=0
+# Time=365 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=375 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=375 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=00
+# 
+# === AXI Master Signals ===
+# Time=375 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=375 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# Time=375 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=385 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=385 | state=0 | next_state=1 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=385 | write_enable=1 | read_enable=0 | empty=1 | full=0 | dout=00
+# 
+# === Address Decoder ===
+# Time=385 | MemWrite=1 | res=fffff801 | newd=1
+# Time=385 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=395 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=395 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=00
+# 
+# === AXI Master Signals ===
+# Time=395 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=395 | state=00 | next_state=01 | tready=0 | s_dout=zz
+# Time=395 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=405 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=405 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=405 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=00
+# 
+# === Address Decoder ===
+# Time=405 | MemWrite=0 | res=00000000 | newd=0
+# Time=405 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=415 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=415 | write_enable=0 | read_enable=0 | empty=1 | full=0 | dout=05
+# 
+# === AXI Master Signals ===
+# Time=415 | state=1 | next_state=1 | count=1 | tvalid=1 | tdata=05 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=415 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# Time=415 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=425 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=425 | state=1 | next_state=1 | count=2 | tvalid=1 | tdata=0a | tlast=0
+# 
+# === FIFO Signals ===
+# Time=425 | write_enable=1 | read_enable=0 | empty=1 | full=0 | dout=05
+# 
+# === Address Decoder ===
+# Time=425 | MemWrite=1 | res=fffff801 | newd=1
+# Time=425 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=435 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=435 | write_enable=0 | read_enable=1 | empty=0 | full=1 | dout=05
+# 
+# === AXI Master Signals ===
+# Time=435 | state=1 | next_state=0 | count=3 | tvalid=1 | tdata=0f | tlast=1
+# 
+# === AXI Slave Signals ===
+# Time=435 | state=01 | next_state=00 | tready=1 | s_dout=zz
+# Time=435 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=445 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=445 | state=0 | next_state=0 | count=3 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=445 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=445 | MemWrite=0 | res=00000000 | newd=0
+# Time=445 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=455 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=455 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=455 | state=0 | next_state=0 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=455 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# Time=455 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=465 | state=00 | next_state=00 | tready=0 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=465 | state=0 | next_state=1 | count=0 | tvalid=0 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=465 | write_enable=1 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=465 | MemWrite=1 | res=fffff801 | newd=1
+# Time=465 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=475 | MemWrite=0 | res=0000001f | newd=0
+# 
+# === FIFO Signals ===
+# Time=475 | write_enable=0 | read_enable=0 | empty=0 | full=0 | dout=xx
+# 
+# === AXI Master Signals ===
+# Time=475 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=475 | state=00 | next_state=01 | tready=0 | s_dout=zz
+# Time=475 | PC=0000000c | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === AXI Slave Signals ===
+# Time=485 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=485 | state=1 | next_state=1 | count=0 | tvalid=1 | tdata=xx | tlast=0
+# 
+# === FIFO Signals ===
+# Time=485 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=xx
+# 
+# === Address Decoder ===
+# Time=485 | MemWrite=0 | res=00000000 | newd=0
+# Time=485 | PC=00000010 | Instr=00000013 | ReadData1=00000000 | ReadData2=00000000 | imm=00000000 | ALUres=00000000 | RegWrite=1
+# 
+# === Address Decoder ===
+# Time=495 | MemWrite=0 | res=00000000 | newd=0
+# 
+# === FIFO Signals ===
+# Time=495 | write_enable=0 | read_enable=1 | empty=0 | full=0 | dout=00
+# 
+# === AXI Master Signals ===
+# Time=495 | state=1 | next_state=1 | count=1 | tvalid=1 | tdata=00 | tlast=0
+# 
+# === AXI Slave Signals ===
+# Time=495 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# Time=495 | PC=00000014 | Instr=00252023 | ReadData1=fffff801 | ReadData2=00000005 | imm=00000000 | ALUres=fffff801 | RegWrite=0
+# 
+# === AXI Slave Signals ===
+# Time=505 | state=01 | next_state=01 | tready=1 | s_dout=zz
+# 
+# === AXI Master Signals ===
+# Time=505 | state=1 | next_state=1 | count=2 | tvalid=1 | tdata=00 | tlast=0
+# 
+# === FIFO Signals ===
+# Time=505 | write_enable=1 | read_enable=1 | empty=0 | full=0 | dout=00
+# 
+# === Address Decoder ===
+# Time=505 | MemWrite=1 | res=fffff801 | newd=1
+# Time=505 | PC=00000018 | Instr=ff5ff06f | ReadData1=0000001f | ReadData2=00000015 | imm=fffffff4 | ALUres=0000001f | RegWrite=1
+# ** Note: $finish    : E:/quartus/modelsim_ase/win32aloem/toptwo.sv(633)
+#    Time: 515 ps  Iteration: 0  Instance: /toptwo_tb
